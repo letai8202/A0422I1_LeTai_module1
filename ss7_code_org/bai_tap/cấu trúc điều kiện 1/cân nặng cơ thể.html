@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p> cân nặng</p>
+    <input id="weight" type="text">
+    <p>chiều cao</p>
+    <input id=" height" type="text">
+    <input type="button" onclick="bodyMass()" value="xem chỉ số BMI">
+    <p id="result"></p>
+</form>
+<script>
+    function bodyMass() {
+        let a = document.getElementById("weight").value;
+        let b = document.getElementById(" height").value;
+        let bmi = parseInt(a) / (parseInt(b * 2));
+        let result = document.getElementById("result");
+        if (bmi < 18) {
+            result.innerHTML = bmi + "underweight"
+        } else if (bmi < 25) {
+            result.innerHTML = bmi + " Normal";
+        } else if (bmi < 30) {
+            result.innerHTML = bmi + "Overweight";
+        } else {
+            result.innerHTML = bmi + " obese";
+        }
+    }
+</script>
+</body>
+</html>

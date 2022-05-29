@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Độ C</label>
+<input type="text " id="doC">
+<input type="button" onclick="doF()" value="chuyển sang độ F">
+<P id="result"></P>
+<script>
+    function doF() {
+        let doC = document.getElementById("doC").value;
+        let chuyenSangdoF = (doC *9/5 +23);
+        if (isNaN(doC)){
+            result.innerHTML= "xin nhập lại bằng số"
+        }else {
+            result.innerHTML = "Độ F là :" +   chuyenSangdoF       }
+
+    }
+</script>
+</body>
+</html>

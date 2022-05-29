@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<label>nhập điểm bài kiểm tra</label>
+<input id="diemBaikiemtra" type="text">
+<br>
+<label>nhập điểm bài giữa kì</label>
+<input id="diemGiuaki" type="text">
+<br>
+<label>nhập điểm bài cuối kì</label>
+<input id="diemCuoiki" type="text">
+<br>
+<input onclick="xepHocLuc()"type="button" value="xếp học lực">
+<p id="result"></p>
+</body>
+<script>
+    function xepHocLuc() {
+        let diemBaikiemtra= Number (parseInt(prompt("nhập điểm bài kiểm tra")).value);
+        let diemGiuaki=Number(parseInt(prompt("nhập điểm giữa kì")).value);
+        let diemCuoiki=Number (parseInt(prompt("nhập điểm cuối kì")).value) ;
+         let dTb = (diemBaikiemtra+(diemGiuaki*2)+(diemCuoiki*3))/6
+        if (isNaN(diemCuoiki&&diemGiuaki&&diemCuoiki)){
+            result.innerHTML=('các điểm có phải là số không ');
+
+        } else {
+            if(num<8) {
+                result.innerHTML = ('xếp loại khá');
+            }if(num<=6.5) {
+                result.innerHTML = ('xếp loại trung bình');
+            }if(num<5) {
+                result.innerHTML=('xếp loại yếu');
+            }else {
+                result.innerHTML=('xếp loại giỏi');
+            }
+        }
+
+
+
+    }
+
+</script>
+</html>

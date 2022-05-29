@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>số mét</label><input type="text" id="soMet">
+<input type="button" onclick="soFeet()" value="số Feet" >
+<p id="result"></p>
+<script>
+    function soFeet() {
+        let soMet = document.getElementById("soMet").value;
+        let doiSangFeet = (soMet*3.2808);
+        if (isNaN(soMet)){
+            result.innerHTML = " xin nhập lại bằng số";
+        } else {
+            result.innerHTML = "số feet là:"+doiSangFeet;
+        }
+
+    }
+</script>
+</body>
+</html>

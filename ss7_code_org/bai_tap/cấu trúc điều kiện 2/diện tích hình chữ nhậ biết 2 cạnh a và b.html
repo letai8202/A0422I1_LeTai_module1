@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<label>chiều dài (a)</label>
+<input type="text" id="canhA">
+<label>chiều rộng (b)</label>
+<input type="text" id="canhB">
+<input type="button" onclick="dienTichhinhchunhat()" value="diện tích hình chữ nhật">
+<p id="result" ></p>
+<script>
+    function dienTichhinhchunhat() {
+        let canhA =  document.getElementById("canhA").value ;
+        let canhB = document.getElementById("canhB") . value;
+        let dienTich = canhA * canhB ;
+        if (isNaN(canhA  && canhB)){
+            result.innerHTML = "nhập lại bằng số";
+        } if ((canhA && canhB) <= 0){
+            result.innerHTML = "kết quả không đủ điều kiện";
+        } else{
+            result.innerHTML = "diện tích hình chữ nhật:"+ dienTich;
+        }
+    }
+</script>
+<body>
+
+</body>
+</html>

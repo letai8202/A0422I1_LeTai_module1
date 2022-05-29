@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<label>nhập tuổi</label>
+<input id="inputAge" type="text">
+<input  type="button" onclick="equal()" value="kiểm tra tuổi">
+<p id="result"></p>
+</form>
+<script>
+    function equal() {
+ let age = Number (document.getElementById("inputAge").value);
+        let result = document.getElementById("result");
+        if (isNaN(age)){
+            result.innerHTML=('age có phải là số hay không');
+        } else {
+            if (age <15){
+                result.innerHTML=('số tuổi không đủ điều kiện vào lớp 10!');
+            } else {
+                result.innerHTML=('số tuổi học sinh đủ điều kiện vào lớp 10!');
+            }
+        }
+    }
+</script>
+</body>
+</html>

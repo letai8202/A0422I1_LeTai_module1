@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>CALCULATOR</title>
+</head>
+
+<body>
+<table>
+    <tr>
+
+        <td><input id='kq' placeholder=" hiển  thị kết quả"type="text"/></td>
+    </tr>
+    <tr>
+    <td><input type="button" value='1' onclick='set_num(this.value)'/></td>
+    <td><input type="button" value='2' onclick='set_num(this.value)'/></td>
+    <td><input type="button" value='3' onclick='set_num(this.value)'/></td>
+    <td><input type="button" value='+' onclick='set_num(this.value)'/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value='4' onclick='set_num(this.value)'/></td>
+        <td><input type="button" value='5' onclick='set_num(this.value)'/></td>
+        <td><input type="button" value='6' onclick='set_num(this.value)'/></td>
+        <td><input type="button" value='-' onclick='set_num(this.value)'/></td>
+
+    </tr>
+
+</table>
+<script>
+    let x = '';
+    function a(id) {
+        return document.getElementById('id');
+    }
+    function set_num(num) {
+        x+=num;
+        a('kq').value = x ;
+
+
+    }
+</script>
+
+</body>
+</html>

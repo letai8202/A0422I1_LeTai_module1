@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Doanh số</label><input id="doanhSo" type="text">(VND)<br>
+<label> Hoa hồng</label><input id="hoaHong"type="text">(%)<br>
+<input type="button" onclick="tinhHoahong()" value="Tính hoa hồng">
+<p id="result"></p>
+<script>
+    function tinhHoahong(){
+    let doanhSo = Number ( document.getElementById("doanhSo").value);
+    let hoaHong = Number (document.getElementById("hoaHong").value);
+    let tinhPhantramhoahong =  parseFloat((doanhSo*hoaHong/100));
+    result.innerHTML= " số tiền hoa hồng"+ tinhPhantramhoahong;
+    }
+</script>
+</body>
+</html>

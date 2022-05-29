@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<label>nhập cạnh a</label>
+<input type="text" id="canhA">
+<input type="button" onclick="dienTichhinhvuong()" value="diện tích hình vuông:">
+<p id="result" ></p>
+<script>
+    function dienTichhinhvuong() {
+let canhA =  document.getElementById("canhA").value ;
+        let dienTich = canhA * canhA ;
+        if (isNaN(canhA)){
+            result.innerHTML = "nhập lại bằng số"
+        } if (canhA< 0){
+            result.innerHTML = "kết quả không đủ điều kiện";
+        } else{
+        result.innerHTML = "diện tích hình vuông:"+ dienTich;}
+    }
+</script>
+<body>
+
+</body>
+</html>

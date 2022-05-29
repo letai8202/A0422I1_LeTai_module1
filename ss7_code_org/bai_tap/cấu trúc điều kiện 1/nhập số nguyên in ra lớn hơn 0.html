@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>nhập số</table>
+<input id="inputInteger" type="text">
+<input type="button" onclick="equal()" value="kiểm tra">
+<p id="result"></p>
+<script>
+    function equal() {
+        let numInteger = parseInt(document.getElementById("inputInteger").value);
+        let result = document.getElementById("result");
+     if (isNaN(numInteger)){
+         result.innerHTML=('age có phải là số hay không');
+     } else {
+         if(numInteger>0){
+             result.innerHTML=numInteger+('số nguyên lớn hơn 0');
+         } else {
+             result.innerHTML=numInteger+('số nguyên bé hơn 0');
+
+
+
+
+         }
+         }
+
+     }
+
+</script>
+</body>
+</html>

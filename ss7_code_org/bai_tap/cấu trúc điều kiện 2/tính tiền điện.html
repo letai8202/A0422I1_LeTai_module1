@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>số KWh sử dụng:</label>
+<input type="text" id="soKWh">
+<label>Gía bán điện:</label>
+<input type="text" id="giaTiendien">
+<input type="button" onclick="tinhTiendien()" value="tính tiền điện">
+<p id="result"></p>
+<script>
+    function tinhTiendien() {
+        let soKWh= (document.getElementById("soKWh").value);
+        let giaTiendien= (document.getElementById("giaTiendien").value);
+        let tinhTiendien = (soKWh*giaTiendien);
+        if (isNaN(soKWh && tinhTiendien)){
+            result.innerHTML = "xin nhập lại bằng số"
+        } else {
+            result.innerHTML = "tính tiền diện :" + tinhTiendien;
+        }
+    }
+</script>
+
+</body>
+</html>
