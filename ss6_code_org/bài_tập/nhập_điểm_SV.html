@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>nhập_điểm_SV</title>
 </head>
 <body>
-$END$
+<script>
+        let diemly= prompt("nhập điểm Lý");
+          let diemhoa= prompt("nhập điểm Hóa");
+        let diemsinh= prompt("nhập điểm Sinh");
+
+      let ly = parseInt(diemly);
+      let hoa = parseInt(diemhoa);
+      let sinh = parseInt(diemsinh);
+      let diemTB= (ly+hoa+sinh)/3;
+    document.write('điểm điểm trung bình'+ diemTB);
+      let diemtong= (ly+hoa+sinh);
+    document.write('điểm tổng'+diemtong);
+</script>
+
 </body>
 </html>

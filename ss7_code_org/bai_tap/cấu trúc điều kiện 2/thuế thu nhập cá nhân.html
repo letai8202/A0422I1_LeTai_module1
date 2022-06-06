@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Thu Nhập:</label> <input type="text" id="thuNhap">
+<input type="button"onclick="tinhThue()" value="tính thuế thu nhập:">
+<p id="result"></p>
+<script>
+    function tinhThue() {
+        let thuNhap = document.getElementById('thuNhap').value;
+
+         if(isNaN(thuNhap)){
+             result.innerHTML='xin nhập lại bằng số';
+         }else if(thuNhap>0 &&thuNhap<=6000000){
+             result.innerHTML='thuế thu nhập 0% = ' +thuNhap;
+
+        }else if (thuNhap<20000000) {
+            result.innerHTML = 'thế thu nhập 2%=' + thuNhap * 2 / 100;
+        } else {
+             result.innerHTML='thuế thu nhập 4%='+ thuNhap*4 / 100;
+        }
+    }
+</script>
+</body>
+</html>

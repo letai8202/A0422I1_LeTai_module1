@@ -7,20 +7,32 @@
 <body>
 <label>số KWh sử dụng:</label>
 <input type="text" id="soKWh">
-<label>Gía bán điện:</label>
-<input type="text" id="giaTiendien">
+
 <input type="button" onclick="tinhTiendien()" value="tính tiền điện">
 <p id="result"></p>
 <script>
     function tinhTiendien() {
-        let soKWh= (document.getElementById("soKWh").value);
-        let giaTiendien= (document.getElementById("giaTiendien").value);
-        let tinhTiendien = (soKWh*giaTiendien);
-        if (isNaN(soKWh && tinhTiendien)){
-            result.innerHTML = "xin nhập lại bằng số"
-        } else {
-            result.innerHTML = "tính tiền diện :" + tinhTiendien;
+        let soKWh= document.getElementById("soKWh").value;
+
+    if (isNaN(soKWh)){
+        result.innerHTML = "xin nhập lại bằng số";
+    } else if (soKWh<=50) {
+        result.innerHTML = '(bậc 1)số tiền:' + (soKWh * 1678);}
+     else   if (soKWh <100) {
+            result.innerHTML = '(bậc 2)số tiền:' + (soKWh * 1734);
+     }
+            else if (soKWh<200) {
+        result.innerHTML = '(bậc 3)số tiền:' + (soKWh * 2014);
+    }
+               else if (soKWh > 200) {
+                    result.innerHTML = '(bậc 4)số tiền:' + (soKWh * 2567);
+                }
+
+                else if(soKWh<=0) {
+
+            result.innerHTML = 'không đủ điều kiện'
         }
+
     }
 </script>
 

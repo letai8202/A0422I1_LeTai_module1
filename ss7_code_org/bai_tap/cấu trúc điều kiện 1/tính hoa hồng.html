@@ -6,15 +6,24 @@
 </head>
 <body>
 <label>Doanh số</label><input id="doanhSo" type="text">(VND)<br>
-<label> Hoa hồng</label><input id="hoaHong"type="text">(%)<br>
+
 <input type="button" onclick="tinhHoahong()" value="Tính hoa hồng">
 <p id="result"></p>
 <script>
     function tinhHoahong(){
     let doanhSo = Number ( document.getElementById("doanhSo").value);
-    let hoaHong = Number (document.getElementById("hoaHong").value);
-    let tinhPhantramhoahong =  parseFloat((doanhSo*hoaHong/100));
-    result.innerHTML= " số tiền hoa hồng"+ tinhPhantramhoahong;
+
+    if ((doanhSo!=0)&&(doanhSo >0)) {
+        result.innerHTML= 'thỏa điều kiện';
+    }else{
+        result.innerHTML='không đủ điều kiện'
+    } if (doanhSo<=10000000){
+        result.innerHTML='(hoa hồng 2%)số tiền:' + (doanhSo*2/100);
+        }if(doanhSo<=20000000){
+            result.innerHTML='(hoa hồng 4%)số tiền:' + (doanhSo*4/100);
+        }else if(doanhSo>20000000) {
+            result.innerHTML='(hoa hồng 10%)số tiền:' + (doanhSo*10/100);
+        }
     }
 </script>
 </body>

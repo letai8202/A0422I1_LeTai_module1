@@ -19,20 +19,20 @@
         let b = document.getElementById('b').value;
         let button = document.getElementById('giaiBpt');
         if (isNaN(a == "" || b == "")){
-            alert("Vui lòng nhập dữ liệu");
+            result.innerHTML=("Vui lòng nhập dữ liệu");
         }
 
         if (a == 0 && b == 0){
-            alert('Phương trình vô số nghiệm');
+            result.innerHTML('Phương trình vô số nghiệm');
         }
         else if (a != 0 && b == 0){
-            alert('Phương trình có nghiệm x = 0');
+            result.innerHTML=('Phương trình có nghiệm x = 0');
         }
         else if (a == 0 && b != 0){
-            alert("Phương trình vô nghiệm");
+            result.innerHTML=("Phương trình vô nghiệm");
         }
         else {
-            alert('Phương trình có nghiệm x = ' + (-b/a));
+            result.innerHTML=('Phương trình có nghiệm x = ' + (-b/a));
         }
     }
 </script>

@@ -16,19 +16,13 @@
         let age = Number (document.getElementById("inputAge").value);
         let result = document.getElementById("result");
         if (isNaN(age)){
-            result.innerHTML=('age có phải là số hay không');
-        } else {
-            if (age >0){
-                result.innerHTML=('số tuổi của người ');
-
-            } else {
-                result.innerHTML=('số tuổi thấp hơn điều kiện ');
-            } if (age<120){
-                result.innerHTML= ('số tuổi của người');
-            } else {
-                result.innerHTML= ('số tổi vượt điều kiện')
-            }
-        }
+            result.innerHTML=('xin nhập lại bằng số');
+        }else
+      if(age>0 && age<120){
+          result.innerHTML='đây là tuổi của người';
+      }  else {
+          result.innerHTML='không phải tuổi của người';
+      }
     }
 
 </script>
