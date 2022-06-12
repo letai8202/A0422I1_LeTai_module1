@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1 :
+    //
+    // let a = [
+    //     [1, 2, 1, 24],
+    //     [8, 11, 9, 4],
+    //     [7, 0, 7, 27],
+    //     [7, 4, 28, 14],
+    //     [3, 10, 26, 7],
+    // ];
+    //
+    // for (let i in a)
+    // {
+    //     console.log("row " + i);
+    //     for (let j in a[i])
+    //     {
+    //         console.log(" " + a[i][j]);
+    //     }
+    // }
+    // Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    //     Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"
+
+    // let x = ['c','s','c',2,6,1];
+    // let first = 0 ;
+    // let last = x.length-1;
+    // while ( first<last){
+    //     let b = x[first];
+    //     x[first] = x[last];
+    //     x[last]=b;
+    //     first++;
+    //     last--;
+    //
+    // }
+    // document.write(x);
+    // Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    //     Chương trình này đếm số ký tự số trong mảng.
+    //     let userData = [
+    //     ['Yamada', 28, 'Tokyo'],
+    //     ['Kiyoshi', 35, 'Hanoi'],
+    //     ['Honda', 24, 'Osaka']
+    // ];
+    //
+    // for ( let i = 0; i < userData.length; i++){
+    //     for (let j = 0; j < userData[i].length; j++){
+    //         console.log("["+i+"]"+"["+j+"] =",userData[i][j]);
+    //     }
+    // }
+    // Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+    // let a = 'i love js';
+    // let b = b.length;
+    // console.log(b);
+
+    // Bài 5: Viết một chương trình nhập vào 2 chuỗi,
+    //     sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+    const a = [1, 2, 3, 5];
+    const b = [1, 2, 3, 5];
+    let isEqual;
+    if(a.length !== b.length) {
+        isEqual = false;
+    }
+    else
+    {
+        for (let i = 0; i < a.length; i++) {
+            if(a[i] !== b[i]) {
+                isEqual = false;
+                break;
+            }
+            isEqual = true;
+        }
+    }
+    console.log(isEqual);
+</script>
+
+</body>
+</html>

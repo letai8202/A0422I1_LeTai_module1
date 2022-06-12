@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bài 1 : tìm số lớn hơn hoặc bằng 10
+    // let number= [1 ,12 ,14 ,10 ,9  ,8 ,7 ,6 ,5 ,15];
+    //  let count = 0 ;
+    //  let result = " ";
+    //  for ( let i of number){
+    //      if(i>=10){
+    //          result +=i+("&nbsp&nbsp");
+    //          count ++ ;
+    //      }
+    //
+    //
+    //
+    //
+    //  }
+    //  document.write('có : ' + count + ' số lớn hơn hoặc bằng 10 :' +result );
+
+    //Bài 2 :Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    // Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+    // let numbers = [1,2,3,4,5,6,7,8,9,10];
+    // let max = numbers[0];
+    // let index = [0]
+    //     for (let i =1;i<numbers.length;i++){
+    //         if(numbers[i]>max){
+    //             max = numbers [i];
+    //             index = i;
+    //         }
+    //     }alert('max : '+ max +"at position " + index);
+    //Bài 3 : Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+    // In ra giá trị trung bình của các phần tử trong mảng.
+    // let Number = [3,4,6,8,9,10,20,23];
+    // let max = Number[0];
+    // let sum = 0;
+    //
+    //
+    // for(let i = 0; i < Number.length;i++) {
+    //     if (Number[i] > max) {
+    //         max = Number[i];
+    //     }
+    // }document.writeln("Phần tử có giá trị lớn nhất là: " + max);
+    // for (const a of Number){
+    //     sum += a;
+    // }
+    // const tb = sum / Number.length;
+    // document.writeln("<br/>Giá trị trung bình của các phần tử trong mảng là: "+tb);
+
+    // Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+    // let x = [4,5,1,3,2,10,];
+    // let first = 0 ;
+    // let last = x.length-1;
+    // while ( first<last){
+    //     let b = x[first];
+    //     x[first] = x[last];
+    //     x[last]=b;
+    //     first++;
+    //     last--;
+    //
+    // }
+    // document.write(x);
+
+    // Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+    // let number= [-1 ,12 ,-14 ,-10 ,9  ,-8 ,7 ,-6 ,5 ,-15];
+    //  let count = 0 ;
+    //  let result = " ";
+    //  for ( let i of number){
+    //      if(i<0){
+    //          result +=i+("&nbsp&nbsp");
+    //          count ++ ;
+    //      }
+    //
+    //
+    //
+    //
+    //  }
+    //  document.write('có : ' + count + ' số nguyên âm :' +result);
+
+    //Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+    // Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array"
+
+    // let arr = [];
+    // for (let i = 0; i < 5; i++) {
+    //     let numbers = parseInt(prompt('nhập mảng - nhập số thứ' + (i + 1) + ' :'));
+    //     arr.push(numbers);
+    // }
+    // let V = parseInt(prompt('Nhập số nguyên V'));
+    // let count = 0;
+    // for (let i of arr) {
+    //     if (i == V) {
+    //         alert('V is in the array');
+    //         count++;
+    //     }
+    // }
+    // if (count == 0) {
+    //     alert('V is not the array');
+    // }
+
+    //Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    // Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+    // let arr = [];
+    // for (let i = 0; i < 5; i++) {
+    //     let numbers = parseInt(prompt('nhập mảng - nhập số thứ' + (i + 1) + ' :'));
+    //     arr.push( numbers );
+    // }
+    // let V = parseInt(prompt('Nhập số nguyên V'));
+    // let count = 0;
+    // for (let i of arr) {
+    //     if (i == V) {
+    //         count++;
+    //         v.splice(numbers,1)[0];
+    //     }
+    // }
+    //Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    // Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+
+ // let number = [34,134,46,57,74,87,54,77,8,58];
+ //    number.sort(function (a,b) {
+ //     return -a+b;
+ //
+ //    });
+ //    document.write('Đã được sắp xếp giảm dần: '+ number)
+ //
+ //    Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+ //        Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+ //    let arr_a = [1, 2, 3,7,8];
+ //    let arr_b = [4, 5, 6,9,10];
+ //    let arr_c = [4,53,74,65,7,45,86,47,56,32,25,92,48,75,-9,-8,-77,88,89,90]
+ //    arr_c = arr_c.concat(arr_a,arr_b);
+ //    console.log(arr_c);
+
+
+
+</script>
+
+</body>
+</html>
