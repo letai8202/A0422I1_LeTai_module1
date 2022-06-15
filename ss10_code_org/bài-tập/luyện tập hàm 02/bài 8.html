@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function createArray(array) {
+        for (let i = 0; i<10; i++ ){
+            array.push (Math.floor(Math.random()* 50)+1);
+        }
+           return array
+    }
+    function reverse() {
+        array.reverse();
+        return array;
+    }
+    let array = new Array();
+    document.write(createArray(array) + "<br>");
+    document.write("Hàm đảo ngược :" + "<br>" + reverse(array));
+</script>
+</body>
+</html>
