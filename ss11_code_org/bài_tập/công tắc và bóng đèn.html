@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" onclick="SwitchOn()" value="on">
+<input type="button" onclick="SwitchOff()" value="off">
+<div id = "lampImg">
+    <img src="off.png">
+</div>
+<script>
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+        turnOn() {
+            this.status = true;
+        }
+        turnOff() {
+            this.status = false;
+        }
+    }
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        connectToLamp(lamp) {
+            this.lamp = lamp;
+        }
+        switchOff() {
+            this.status = false;
+            this.lamp.turnOff();
+        }
+
+        switchOn() {
+            this.status = true;
+            this.lamp.turnOn();
+        }
+    }
+
+    function SwitchOn() {
+        document.getElementById("lampImg").innerHTML= ' <img src="on.png"/> '
+    }
+    function SwitchOff(){
+        document.getElementById("lampImg").innerHTML='<img src="off.png" />'
+
+    }
+</script>
+
+</body>
+</html>

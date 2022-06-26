@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="400" style="border:10px solid #1c03fd;">
+</canvas>
+<script>
+    class Rectangle {
+        constructor (length, width) {
+            this.length = length;
+            this.width = width;
+        }
+        getArea = function () {
+            return this.length * this.width;
+        }
+        getPerimeter = function () {
+            return (this.length + this.width) * 2;
+        }
+        getDisplay = function () {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, 200, 100);
+            ctx.font = ("20px Verdana");
+            ctx.fillText (" diện tích : " + Area + "  chu vi: " + Preimeter,200,100);
+        }
+    }
+    let Rectangle = new Rectangle(100, 200);
+    let Area = Rectangle.getArea();
+    let Preimeter = Rectangle.getPerimeter();
+    Rectangle.getDisplay();
+
+
+</script>
+</body>
+</html>

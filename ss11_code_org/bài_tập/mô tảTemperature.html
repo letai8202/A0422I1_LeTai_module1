@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temperatureCalutor {
+        constructor(Celsius) {
+            this.Celsius = Celsius;
+        }
+                getF(){
+                    return 1.8*this.Celsius+ 32;
+                }
+                getKenvin() {
+                    return this.Celsius + 273.15;
+                }
+
+
+        }
+
+    let calculator = new temperatureCalutor(2);
+    let F = calculator.getF();
+    let K = calculator.getKenvin();
+    alert(F + "°F   và   " + K + " °K  ");
+
+
+
+</script>
+</body>
+</html>
