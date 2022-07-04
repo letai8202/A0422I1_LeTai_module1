@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc"
+    let s2 = "adcaa"
+    let count = 0 ;
+    let output = []
+    for(let i in s1){
+        for(let j in s2){
+            if(s1[i] === s2[j]){
+                output.push(s1[i]);
+                // let temp1 = s1.replace(s1[i],'-');
+                let temp2 = s2.replace(s2[j],'+');
+                // s1= temp1;
+                s2= temp2;
+                document.write(output + "<br>")
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>

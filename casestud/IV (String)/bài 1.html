@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function input(){
+        let input = prompt("Nhập vào xâu kí tự ")
+        conVert(input)
+    }
+    function conVert(input){
+        let array = input.toLowerCase().trim().split(" ")
+        let upperCase = array.map(name => name.charAt(0).toUpperCase() + name.slice(1))
+        let output = []
+        for(let i = 0; i < upperCase.length; i++){
+            if(upperCase[i] === " " && upperCase[i+1] === " "){
+                continue ;
+            }else{
+                output.push(upperCase[i]) ;
+            }
+        }
+        document.write(output.join(" "))
+    }
+    input()
+</script>
+</body>
+</html>

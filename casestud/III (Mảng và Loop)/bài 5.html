@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!-- <body style="background-image: url('autumn_fruits.jpg') ; background-repeat: no-repeat;"> -->
+<h1 style="background: #00c4ff ; color: rgba(255,242,0,0.95) ; text-align: center">Thức uống</h1>
+<table border="1px">
+    <tr>
+        <th>Vui lòng chọn loại nước uống bên dưới</th>
+        <th> Giá Tiền</th>
+        <th>Số Lượng</th>
+        <th colspan="2"> Số tiền phải trả </th>
+    </tr>
+    <tr>
+        <td>
+            <select id="sel" onchange="beverageChange(this)">
+                <option style="background-color: #75d606">Chọn thức uống</option>
+                <option value="orange"> Cam vắt</option>
+                <option value="carrot"> Nước ép cà rốt </option>
+                <option value="tomato"> Nước ép cà chua</option>
+                <option value="coconut"> Nước dừa </option>
+                <option value="water"> Nước lọc </option>
+            </select>
+        </td>
+        <td>
+            <input id="dongia" style="background-color: #00e1ff;">
+        </td>
+        <td>
+            <input id="soluong" type="number" placeholder="số lượng" style="background-color: #ED6E55">
+        </td>
+        <td>
+            <button onclick="thanhToan(this)" onchange="beverageChange(this)"> Thanh Toán </button>
+        </td>
+        <td>
+            <p id="sotien" style="background-color: rgba(0,0,0,0.15); color:rgb(0,64,255) ; "> Thành tiền</p>
+        </td>
+    </tr>
+</table>
+<script>
+    function thanhToan(obj){
+        let soluong = parseInt(document.getElementById("soluong").value)
+        choose = document.getElementById("sel").value
+        // alert(choose)
+        let sotien = document.getElementById("sotien")
+        if(soluong > 0){
+            if(choose == "orange" ){
+                sotien.innerHTML = soluong*20000 + " .VND"
+            }else if(choose == "carrot"){
+                sotien.innerHTML = soluong*25000 + " .VND"
+            }else if(choose == "tomato"){
+                sotien.innerHTML = soluong*15000 + " .VND"
+            }else if(choose == "coconut"){
+                sotien.innerHTML = soluong*30000 + " .VND"
+            }else if(choose == "water"){
+                sotien.innerHTML = soluong*5000 + " .VND"
+            }else{
+                sotien.innerHTML = " vui lòng lựa chọn nước uống"
+            }
+        }else{
+            sotien.innerHTML = "Nhập sai số lượng"
+        }
+    }
+    function beverageChange(obj){
+        let beverage = obj.value
+        let dongia = document.getElementById("dongia")
+        if(beverage === " "){
+            alert("Bạn chưa chọn thức uống")
+        }else if(beverage === "orange"){
+            let conf = confirm ("bạn đã chọn :  Cam vắt " )
+            if(conf){
+                dongia.value = "20.000 VND" ;
+            }
+        }else if(beverage ==="carrot"){
+            let conf = confirm("bạn đã chọn :  Nước ép cà rốt ")
+            if(conf){
+                dongia.value = "25.000 VND" ;
+            }
+        }else if(beverage === "tomato"){
+            let conf = confirm("bạn đã chọn :  Nước ép cà chua " )
+            if(conf){
+                dongia.value = "15.000 VND" ;
+            }
+        }else if(beverage === "coconut"){
+            let conf = confirm("bạn đã chọn :  Nước dừa " )
+            if(conf){
+                dongia.value = "30.000 VND" ;
+            }
+        }else if(beverage === "water"){
+            let conf = confirm ("bạn đã chọn :  nước lọc " )
+            if(conf){
+                dongia.value = "5.000 VND" ;
+            }
+        }
+    }
+</script>
+</body>
+</html>

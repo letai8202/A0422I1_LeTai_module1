@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = parseInt(prompt("Nhập kích thước chiều dài ma trận"))
+    let y = parseInt(prompt("nhập kích thước  chiều cao ma trận "))
+    let array = []
+    function maxArr(x,y) {
+        for (let i =0 ; i<x;i++){
+            let arrTemp = []
+            for (let j =0;j<y;j++){
+                arrTemp.push (parseInt(prompt("nhập phần tủ")))
+            }
+            array.push(arrTemp);
+        }
+
+
+        let maxArray = array[0][0]
+        for ( let i =0;i<x;i++){
+            for (let j = 0 ; j < y ;j++){
+                if ( array[i][j]>maxArray){
+                    max = array[i][j];
+                }
+
+            }
+            }document.writeln("giá trị lớn nhất" + maxArray +"<br>")
+            }
+ maxArr(x,y)
+
+    function minArr(x,y) {
+        for (let i =0 ; i<x;i++){
+            let arrTemp = []
+            for (let j =0;j<y;j++){
+                arrTemp.push (parseInt(prompt("nhập phần tủ")))
+            }
+            array.push(arrTemp);
+        }
+
+
+        let minArray = array[0][0]
+        for ( let i =0;i<x;i++){
+            for (let j = 0 ; j < y ;j++){
+                if ( array[i][j]<minArray){
+                    min = array[i][j];
+                }
+
+            }
+        }document.writeln("giá trị nhỏ nhất" + minArray +"<br>")
+    }
+    minArr(x,y)
+
+
+
+</script>
+</body>
+</html>

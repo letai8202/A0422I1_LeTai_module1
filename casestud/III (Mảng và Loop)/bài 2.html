@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = [7, 2,5, 3, 5, 3]
+    let b = [2, 5, 4, 4,6, 3, 7, 5, 3]
+    let isFlag = true
+    let d = []
+    for (let i = 0; i < b.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (b[i] == a[j]) {
+                isFlag = false
+                break;
+            }
+        }
+        if (isFlag == true && d.indexOf(b[i])=== -1) {
+            d.push(b[i])
+        } else {
+            isFlag = true
+        }
+    }
+    document.write("Hiệu B/A : " + d)
+</script>
 </body>
 </html>
